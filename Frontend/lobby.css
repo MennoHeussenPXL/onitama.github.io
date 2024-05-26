@@ -1,0 +1,93 @@
+body {
+    background-image: url("images/onitama_wallp.webp");
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center; /* Vertically center the text */
+}
+
+img {
+    display: block;
+    margin: 0 auto; /* Centreert het logo horizontaal */
+    width: 300px; /* Pas de breedte van het logo aan */
+}
+
+#scrollable-list {
+    width: 400px;
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+    color: black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+#scrollable-list::-webkit-scrollbar {
+    width: 0; /* For Chrome, Safari, and Opera */
+}
+
+#scrollable-list {
+    scrollbar-width: none; /* For Firefox */
+}
+.list-item {
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* Adjust height as needed */
+    border-bottom: 1px solid #eee; /* Optional: Add a bottom border */
+}
+
+.selected {
+    background-color: #f0f0f0; /* Style for selected item */
+}
+
+.button1 {
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+    width: 30%;
+    height: 5%;
+    margin: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center the text */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+    .button1 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .button1 span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .button1:hover span {
+        padding-right: 25px;
+    }
+
+        .button1:hover span:after {
+            opacity: 1;
+            right: 0;
+        }

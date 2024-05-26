@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onitama</title>
+    <link rel="stylesheet" type="text/css" href="game.css" />
+    <script src="js/game.js"></script>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td class="cards" onclick="selectCard('player2Card1')">
+                <div id="player2CardName1" align="center"></div>
+                <table id="player2Card1" class="card">
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                </table>
+            </td>
+            <td class="cards" onclick="selectCard('player2Card2')">
+                <div id="player2CardName2" align="center"></div>
+                <table id="player2Card2" class="card">
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div class="lobby">
+        <button id="leaveGame" class="leaveGame">Leave</button>
+        <table>
+            <tr>
+                <td id="player1" class="player1">Player 1 Name</td>
+                <td id="player2" class="player2">Player 2 Name</td>
+            </tr>
+        </table>
+        <div id="message" class="message"></div>
+        <button id="startGame" class="startGame">Start Game</button>
+    </div>
+    <div class="wrap">
+        <table id="board" class="board">
+            <tr>
+                <td class="grid" id="cell-0-0"></td>
+                <td class="grid" id="cell-0-1"></td>
+                <td class="grid" id="cell-0-2"></td>
+                <td class="grid" id="cell-0-3"></td>
+                <td class="grid" id="cell-0-4"></td>
+            </tr>
+            <tr>
+                <td class="grid" id="cell-1-0"></td>
+                <td class="grid" id="cell-1-1"></td>
+                <td class="grid" id="cell-1-2"></td>
+                <td class="grid" id="cell-1-3"></td>
+                <td class="grid" id="cell-1-4"></td>
+            </tr>
+            <tr>
+                <td class="grid" id="cell-2-0"></td>
+                <td class="grid" id="cell-2-1"></td>
+                <td class="grid" id="cell-2-2"></td>
+                <td class="grid" id="cell-2-3"></td>
+                <td class="grid" id="cell-2-4"></td>
+            </tr>
+            <tr>
+                <td class="grid" id="cell-3-0"></td>
+                <td class="grid" id="cell-3-1"></td>
+                <td class="grid" id="cell-3-2"></td>
+                <td class="grid" id="cell-3-3"></td>
+                <td class="grid" id="cell-3-4"></td>
+            </tr>
+            <tr>
+                <td class="grid" id="cell-4-0"></td>
+                <td class="grid" id="cell-4-1"></td>
+                <td class="grid" id="cell-4-2"></td>
+                <td class="grid" id="cell-4-3"></td>
+                <td class="grid" id="cell-4-4"></td>
+            </tr>
+        </table>
+        <div class="next_card">
+            <div id="nextCardName" align="center"></div>
+            <table id="next_card" class="card">
+                <tr>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                </tr>
+                <tr>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                </tr>
+                <tr>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                </tr>
+                <tr>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                </tr>
+                <tr>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                    <td class="gridCard"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br />
+    <table align="center">
+        <tr>
+            <td class="cards" onclick="selectCard('player1Card1')" >
+                <div id="player1CardName1" align="center"></div>
+                <table id="player1Card1" class="card">
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                </table>
+            </td>
+            <td class="cards" onclick="selectCard('player1Card2')">
+                <div id="player1CardName2" align="center"></div>
+                <table id="player1Card2" class="card">
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                        <td class="gridCard"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <button class="openChatBtn" onclick="openForm()">Chat</button>
+    <div class="openChat">
+        <form>
+            <h1>Chat</h1>
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn close" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+</body>
+</html>
